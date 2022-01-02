@@ -4,55 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/808019561542189076/925752369646563368/unknown.png">
-    <style>
+    <link rel="stylesheet" href="style.css">
 
-    p {
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 25px;
-        position: relative;
-        font-family: Helvetica;
-        padding: 50px 0 50px;
-
-    }
-
-    body {
-          background-color: #2C2F33;
-          overflow-y: hidden; 
-          overflow-x: hidden;
-
-        }
-
-     img {
-       display: block;
-       bottom: 0;
-       width: 250px;
-       border-radius: 125px;
-       -webkit-user-drag: none;
-       position: absolute;
-       animation: floating 15s linear infinite;
-       
-    }
-
-        @keyframes floating {
-            0% {
-                left: 0;
-                transform: rotate(0deg);
-            }
-            50% {
-                left: calc(100% - 100px); 
-                transform: rotate(1665deg);
-            }    
-            100% {
-                left: 0;
-                transform: rotate(-1065deg);
-            }
-        }
-
-      
-
-
-    </style>
 
     <title> Kreatív Szöveg Generátor </title>
     
@@ -60,103 +13,33 @@
 
 <body>
      <br>
-    <p> </p>
+    <p> Először is töltsd ki az alábbi mezőket: </p>
+    <div style="width: 1000px; margin:0 auto;">
+        <label for="mnev1">Melléknév:</label>
+        <input type="text" id="mnev1"><br><br>
+        <label for="mnev2">2. Melléknév:</label>
+        <input type="text" id="mnev2"><br><br>
+        <label for="fn1">Főnév:</label>
+        <input type="text" id="fn1"><br><br>
+        <label for="fn2">2. Főnév:</label>
+        <input type="text" id="fn2"><br><br>
+        <label for="ige">Ige:</label>
+        <input type="text" id="ige1"><br><br>
+        <label for="ige2">Múlt i. ige:</label>
+        <input type="text" id="ige2"><br><br>
+        <label for="faszsag">Random hülyeség (főnév):</label>
+        <input type="text" id="faszsag"><br><br>
+        <br>
+        <button style="width: 1000px; margin:0 auto;" type="button" id="button"  onclick="ertekadas()">Mehet!</button>
+    </div>
+    <br>
 
-    <script>
+    <p id="text"> </p>
+    <br>
+    <audio id="audio" src="detekinek.mp3"></audio>
+    <img id="flare" src="https://cdn.discordapp.com/attachments/808019561542189076/925759956764995594/6cbbcb077478a73d16d85a53172b2b93.png" alt = "icon">
 
-  var melleknev = prompt("Adj meg egy melléknevet!");
-  var fonev = prompt("Adj meg egy főnevet!");
-  var melleknev2 = prompt("Adj meg egy újabb melléknevet!");
-  var fonev2 = prompt("Adj meg egy újabb főnevet!");
-  var ige  = prompt("Adj meg egy igét!");
-  var multIge = prompt("Adj meg egy múlt idejű igét!");
-  var faszsag = prompt("Adj meg egy random hülyeséget, de főnévi formában legyen!");
- 
-  
-  function omegaLUL () {
-      for (var i = 0; i < 10; i--) {
-       alert ("Kiakartad játszani a rendszert, de most rábasztál! FlareGuy üdvözöl. :)");
-    }
-}
- 
-
- switch (0) {
-
-    case melleknev.length: 
-     
-        omegaLUL();
-
-    break;
-
-    case fonev.length: 
-   
-         omegaLUL();
-
-    break;
-
-    case melleknev2.length: 
-  
-        omegaLUL();
-
-    break;
-   
-    case fonev2.length:
-
-       omegaLUL();
-
-    break;
-
-    case ige.length: 
-
-      omegaLUL();
-
-    break;
-
-    case multIge.length:
-
-     omegaLUL();
-
-    break;
-
-    case faszsag.length: 
-
-      omegaLUL();
-
-    break;
-
- }
-
- 
-
-    var text = [`${fonev} egy ${fonev2} áldozata lett. Senki se tudja, hogy miért nem inkább egy ${melleknev} intézte volna el. A ${melleknev2} szerint ${fonev} szívesen ${multIge}. Azt viszont nem tudni, hogy a ${fonev2}-al/el mi a ${faszsag} történt. Az ügy még mindig ${ige}.`,
-
-     `A ${fonev} -t sikeresen ${multIge} a ${fonev2}. Valószínűleg ennek köze volt a ${melleknev}-hez/hoz és a(z) ${melleknev2}-hez/hoz. Sajnos ezután mindenki ${ige} és ${faszsag}-t hirdetnek.`,
-
-      `${fonev} se tudta, hogy mit ${ige}. Ez egy ${melleknev} este történt. Még a ${fonev2}-nak/nek se volt fogalma semmiről, csak azt ${multIge}, hogy árad a sok ${faszsag}. Másnap mindenki ${melleknev2} lett.`,
-
-    `${fonev} ${multIge}. A kunyhóból kijőve ${ige} egy ${fonev2}-t ami nagyon ${melleknev} lett. ${fonev} szerint ez a pillanat nagyon ${melleknev2} volt és ${faszsag}.`,
-
-   `${fonev2} ajándékba kapott egy ${melleknev}-t. Ezután elkezdte ezt ${ige}-ni. Ezután ${multIge} ${fonev} egy ${melleknev2} ${faszsag}-t.`,
-
- `Akármennyi ${faszsag} van az utcán, ${fonev} mindig ${ige}-ja őket. Ez mind a polgármesternek: ${fonev2}-nek köszönhető. Ő mindig is egy olyan ${melleknev} volt, aki ${multIge} minden ${melleknev2}-t.`,
-
-  `Ne ítélj a név alapján! Egy ${fonev} is lehet ${fonev2}! Debrőczky Péter, alias ${faszsag} is csak a pénz miatt ${ige}! Ez nem ${melleknev} dolog, ez egyszerűen ${melleknev2}! ${faszsag} tehát kiskorában mindig ${multIge}.`,
-
- `Az egyik staff titokban ${fonev}, csak nem ${ige}. ${fonev2} már rájött a turpisságra, ezért a következő dolgot tette: ${multIge}. És még azt mondják, hogy itt nincs ${melleknev} és ${melleknev2}. Szeritnem ez az egész helyzet egy nagy ${faszsag}.`,
-
- `Nincs annál jobb, mint amikor ${fonev} ${ige}. Ezt még ${fonev2} is jó szemmel nézi. Természetesen mindkettőjük ${melleknev}, még a ${melleknev2} staff is megmondja ezt. Ezután fogták ${fonev2}-t és ${fonev}-t, majd ${multIge} a staff. Természetesen a végeredmény ${faszsag} lett. `,
-
- `Meleg van? Nos erről csak a ${faszsag} tehet. Flare már ${multIge} a ${faszsag}-t, hogy a melegség elmúljon, de nem sikerült. ${fonev} előállt egy ötlettel, miszerint ha egy ${melleknev}-t és egy ${melleknev2}-t összeugrasztunk, akkor ${fonev2} alkotódik meg belőle, aki minden nap ${ige} majd.`,
- 
- `${multIge} majd azt mondta ${fonev}: "${fonev2} egy ${faszsag}". Ezután egy ${melleknev} betörte az ajtót, és a következőt kiáltotta a ${melleknev2} ${fonev}-nak/nek: "Mégis hogyan ${ige} Ön??"`];
-
-
-  const random = Math.floor((Math.random() * text.length ));
-
-document.write("<p>" + text[random] + "</p>");
-document.write('<img src = "https://cdn.discordapp.com/attachments/808019561542189076/925759956764995594/6cbbcb077478a73d16d85a53172b2b93.png" alt = "icon">')
-
-    </script>
+    <script src="scriptek.js"> </script>
 
 </body>
 
