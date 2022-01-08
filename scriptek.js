@@ -51,12 +51,22 @@
   
     `Tegnap ${fonev} ${ige} a hídon és összetálkozik egy ${fonev2}-al/el. Mindkettőjük úgy érezte magát, mintha ${melleknev} cseresznyék esnének az égből. ${fonev} ${multIge} egyet majd otthagyta a ${melleknev} ${fonev2}-t mint egy ${faszsag}.`,
   
-    `A tavalyi nyaramat haverom farmján töltöttem ami ${melleknev} volt. Annyit kell róla tudni, hogy termel búzát, zabot és ${fonev}-t is. Tyúkot is tenyészt, ami ${ige} napokig, majd a tojásból kikel egy kis bolyhos, ${melleknev2} ${fonev2}. Azóta a haverom annyit ${multIge}, hogy már ismét kedvem van elmenni az ő ${faszsag} farmjára.`];
+    `A tavalyi nyaramat haverom farmján töltöttem ami ${melleknev} volt. Annyit kell róla tudni, hogy termel búzát, zabot és ${fonev}-t is. Tyúkot is tenyészt, ami ${ige} napokig, majd a tojásból kikel egy kis bolyhos, ${melleknev2} ${fonev2}. Azóta a haverom annyit ${multIge}, hogy már ismét kedvem van elmenni az ő ${faszsag} farmjára.`,
+  
+    `Minden ${melleknev} kémnek szüksége van legalább egy pár X-rayes ${fonev}-ra/re, egy ${faszsag} ${fonev2}-ra/re, és egy high-tech mobilra ami az összes ${melleknev2} funkcióval el van látva. Amennyiben az X-rayes ${fonev} nem ${ige}, nem kell aggódni. Nagy eséllyel azért fordul ez elő, mert a gyártója ${multIge}.`,
+  
+    `Év vége van. Mindenki azon ${multIge}, hogy hova ${ige} majd gyakorlatra. ${fonev} személy szerint csak egy ${melleknev}-napot akar tartani magának. A probléma csak az ezzel az egésszel, hogy ${fonev2} egy ${faszsag} és nagyon nem nézi jó szemmel ezt a ${melleknev2} ötletet.`,
+  
+    `A pizzát egy ${melleknev} személy találta fel, név szerint ${fonev}. A pizza az alábbi hozzávalókból készül el: először is kell egy nagy adag ${fonev2} bele, és ne feledkezzünk meg arról, hogy kell mellé 2 evőkanálnyi ${faszsag} is, hogy jó ${melleknev2} legyen az ételünk. A legvégén szükségünk lesz egy segédre aki ${ige}, mivel a pizzának nagyon nagy szüksége van erre. Miután ezek megvannak, és feltálaltuk az ételt, el lehet mondani az ételkóstolóról, hogy ${multIge}, mint a torkosborz.`];
 
 
     const random = Math.floor((Math.random() * text.length ));
 
     document.getElementById("text").innerHTML =  text[random];
+}
+
+function getW(response) {
+  console.log(response.value + "x látogatták meg az oldalt. <3");
 }
 
 document.getElementById("flare").addEventListener("click", function(){
